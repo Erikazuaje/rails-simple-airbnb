@@ -1,0 +1,11 @@
+<div class="container mt-5">
+  <h1 class="text-center">List of Flats</h1>
+
+  <ul class="list-group">
+    <% @flats.each do |flat| %>
+      <li class="list-group-item">
+        <%= link_to "#{flat.name} - #{flat.address}", flat_path(flat), class: "text-decoration-none" %>
+      </li>
+    <% end %>
+  </ul>
+</div>
