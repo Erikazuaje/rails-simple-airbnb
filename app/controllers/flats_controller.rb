@@ -6,7 +6,6 @@ class FlatsController < ApplicationController
   end
 
   def show
-    # No se necesita ninguna lógica adicional aquí, ya que ya hemos recuperado el apartamento mediante el before_action.
   end
 
   def new
@@ -24,7 +23,6 @@ class FlatsController < ApplicationController
   end
 
   def edit
-    # No se necesita ninguna lógica adicional aquí, ya que ya hemos recuperado el apartamento mediante el before_action.
   end
 
   def update

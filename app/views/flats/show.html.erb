@@ -1,12 +1,13 @@
-<div class="container mt-5">
-  <h1 class="text-center"><%= @flat.name %></h1>
-  <p class="text-center"><strong>Address:</strong> <%= @flat.address %></p>
-  <p class="text-center"><strong>Description:</strong> <%= @flat.description %></p>
-  <p class="text-center"><strong>Price per Night:</strong> $<%= @flat.price_per_night %></p>
-  <p class="text-center"><strong>Number of Guests:</strong> <%= @flat.number_of_guests %></p>
-
-  <div class="text-center mt-4">
-    <%= link_to "Edit Flat", edit_flat_path(@flat), class: "btn btn-primary" %>
-    <%= link_to "Delete Flat", @flat, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger" %>
+<div class="card">
+  <img src="<%= @flat.picture_url %>" alt="<%= @flat.name %>" class="card-img-top">
+  <div class="card-body">
+    <h5 class="card-title"><%= @flat.name %></h5>
+    <p class="card-text"><%= @flat.description %></p>
+    <p class="card-text"><strong>Price per night:</strong> <%= @flat.price_per_night %> USD</p>
+    <p class="card-text"><strong>Number of guests:</strong> <%= @flat.number_of_guests %></p>
+    <%= link_to 'Edit Apartment', edit_flat_path(@flat), class: 'btn btn-warning' %>
+    <%= link_to 'Delete Apartment', @flat, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
   </div>
 </div>
+
+<%= link_to 'Back to Apartments', flats_path, class: 'btn btn-secondary mt-3' %>
